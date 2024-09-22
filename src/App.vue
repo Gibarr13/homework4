@@ -3,7 +3,7 @@
   import Balance from './components/Balance.vue';
   import IncomeExpenses from './components/IncomeExpenses.vue';
   import AddTransaction from './components/AddTransaction.vue';
-  import TransactionList from './components/TransactionList.vue';
+  import TransactionList from './components/TransactionList.vue';l
 
   import {ref, computed, onMounted} from 'vue'
 
@@ -33,15 +33,11 @@
 
  const handleTransaction = (transactionData) => {
     transactions.value.push({
-      id: generateID(),
       text: transactionData.text,
       amount: transactionData.amount,
     })  
     saveToLocalStorage()
  }
-
-  const generateID = () =>{
-    return Math.floor(Math.random()*10000000)
   }
 
   const handleDelete = (id) => {
